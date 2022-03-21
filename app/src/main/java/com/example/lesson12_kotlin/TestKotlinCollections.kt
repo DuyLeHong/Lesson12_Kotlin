@@ -30,6 +30,17 @@ fun main() {
         println("Some useful info on user index $i : ${sudoers.get(i)}")
     }
 
+    val list1 : List<String> = listOf("CodeFresher", "Lesson12", "Kotlin-P1")
+
+    val listString : MutableList<String> = mutableListOf("CodeFresher", "Lesson12", "Kotlin-P1")
+
+    listString.add("Test MutableList")
+    listString.removeAt(0)
+    listString[0] = "Lesson12-Part2"
+
+    println (listString)
+
+
 
 
 }
