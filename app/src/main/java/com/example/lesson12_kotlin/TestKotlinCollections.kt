@@ -41,6 +41,17 @@ fun main() {
     println (listString)
 
 
+    val numbers = listOf(1, -2, 3, -4, 5, -6)      // 1
+
+    val positives = numbers.filter { item -> item > 0 }  // 2
+
+    val negatives = numbers.filter { it < 0 }      // 3
+
+    val list2 = numbers.filter { i -> (i > 0) }
+
+    println("Numbers: $numbers")
+    println("Positive Numbers: $positives")
+    println("Negative Numbers: $negatives")
 
 
 }
