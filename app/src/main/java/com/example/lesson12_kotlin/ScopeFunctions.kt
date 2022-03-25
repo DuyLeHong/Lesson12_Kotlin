@@ -76,5 +76,35 @@ fun main() {
     }
 
     getStudenInfo(null)
-    getStudenInfo(Student("Nguyen Manh Hung", 20, "", false))
+
+    val myStudent = Student("Nguyen Manh Hung", 20, "", false)
+    getStudenInfo(myStudent)
+
+    println ()
+    println ("---------With----------")
+
+    with(myStudent) {
+        val _sName  = sName
+        println("$sName:$age")
+    }
+
+    println ()
+    println ("---------Apply----------")
+    myStudent.apply {
+        sName = "Nguyen Van Hung"
+        age = 21
+        sClass = "CNTT1"
+    }
+
+    println(myStudent)
+
+    println ()
+    println ("---------also----------")
+    myStudent.also {
+        println(it.toString())
+    }
+
 }
+
+
+class Configuration(var host: String, var port: Int)
