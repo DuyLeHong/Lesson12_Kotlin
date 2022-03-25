@@ -1,5 +1,7 @@
 package com.example.lesson12_kotlin
 
+import com.example.lesson12_kotlin.model.Student
+
 fun customPrint(s: String) {
     print(s.uppercase())
 }
@@ -55,4 +57,24 @@ fun main() {
     printNonNull("my string")
 
     printIfBothNonNull("first", null)
+
+    println ()
+    println ("---------Run----------")
+
+    //run
+    fun getStudenInfo(student: Student?) {
+
+        val studentAge = student?.run {                                                   // 1
+            println(student.toString())
+
+            student.age
+
+            //1
+        }
+
+        println(studentAge)
+    }
+
+    getStudenInfo(null)
+    getStudenInfo(Student("Nguyen Manh Hung", 20, "", false))
 }
