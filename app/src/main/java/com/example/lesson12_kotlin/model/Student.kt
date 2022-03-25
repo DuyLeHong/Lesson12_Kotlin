@@ -6,4 +6,11 @@ class Student(var sName: String, var age: Int, var sClass: String, var isK56: Bo
         return "Student(sName='$sName', age=$age, sClass='$sClass', isK56=$isK56)"
     }
 
+    companion object {                   //2
+        val COMMON_MESS = "Common message for Student"
+        fun showCommonInfo() {
+            println("Student in Android Course")
+        }
+    }
+
 }

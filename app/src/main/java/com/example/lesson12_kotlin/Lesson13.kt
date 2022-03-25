@@ -23,23 +23,15 @@ fun main() {
     println(upperCase5(student))
     println(upperCase6(student))
 
+    val keyName : String = AppUtils.KEY_NAME
 
-    // higher order function
-    val sumResult = calculate(4, 5, ::sum)                          // 4
-    val mulResult = calculate(7, 8, ::phepNhan  )              // 5
-    println("sumResult ${sumResult(4)}, mulResult ${mulResult(5)}")
+    AppUtils.takeParams(keyName, keyName)
+
+    AppUtils.doSomething()
+
+    println(Student.COMMON_MESS)
+
+    Student.showCommonInfo()
 
 }
 
-fun square(x: Int) = x * x
-
-fun calculate(x: Int, y: Int, tinhToan: (Int, Int) -> Int): (Int) -> Int {  // 1
-
-    return ::square                                          // 2
-}
-
-fun sum(x: Int, y: Int) = x + y                                     // 3
-
-fun phepNhan(x: Int, y: Int) : Int  {
-    return x * y
-}
